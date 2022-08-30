@@ -29,8 +29,31 @@
 .navbar li a:hover{
     color:red;
 }
-.process h3{
+.process .process_button{
     font-size: 30px;
+    display: inline-block;
+    background-color: transparent;
+    border: none ;
+    outline: none ;
+    padding:10px 10px;
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.process .process_button::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 0%;
+    width: 2%;
+    background-color: lightblue;
+    z-index: -1;
+    transition: height 0.25s linear, width 0.25s ease-in-out 0.25s ;
+}
+.process .process_button:hover::before{
+    height: 100%;
+    width: 100%;
 }
 .process hr{
     border: 1px solid black;
@@ -66,8 +89,30 @@
     color: red;
 }
 
-.our_team h3{
+.our_team .our_team_button{
     font-size: 30px;
+    display: inline-block;
+    background-color: transparent;
+    border: none ;
+    outline: none ;
+    padding:10px 10px;
+    position: relative;
+    cursor: pointer;
+}
+.our_team .our_team_button::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 100%;
+    width: 0%;
+    background-color: lightblue;
+    z-index: -1;
+    transition: width 1s ease-in-out;
+}
+.our_team .our_team_button:hover::before{
+    width: 100%;
 }
 .our_team hr{
     border: 1px solid black;
@@ -103,8 +148,30 @@
     color: red;
 }
 
-.news h3{
+.news .news_button1{
     font-size: 30px;
+    display: inline-block;
+    background-color: transparent;
+    border: none ;
+    outline: none ;
+    padding:10px 10px;
+    position: relative;
+    cursor: pointer;
+}
+.news .news_button1::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    transform: translate(0, -50%);
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: lightblue;
+    z-index: -1;
+    transition: height 1s ease-in-out;
+}
+.news .news_button1:hover::before{
+    height: 100%;
 }
 .news hr{
     border: 1px solid black;
